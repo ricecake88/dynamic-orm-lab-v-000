@@ -55,5 +55,6 @@ class InteractiveRecord
   end
   
   def self.find_by(attribute)
-    sql = "SELECT * FROM #{self.table_name} WHERE #{self."
+    binding.pry
+    sql = "SELECT * FROM #{self.table_name} WHERE attribute = #{self.send(attribute)}"
 end
