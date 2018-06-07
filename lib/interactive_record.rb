@@ -55,12 +55,6 @@ class InteractiveRecord
   end
   
   def self.find_by(attribute)
-    self.col_names_for_insert do |col|
-      binding.pry
-      if attributes.keys == col
-        puts "yay"
-      end
-    end
     sql = "SELECT * FROM #{self.table_name} WHERE"
   end
 end
