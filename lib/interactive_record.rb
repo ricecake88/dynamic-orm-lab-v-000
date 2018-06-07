@@ -55,9 +55,12 @@ class InteractiveRecord
   end
   
   def self.find_by(attribute)
-    binding.pry
     self.column_names do |col|
-      attributes.keys == col
+      binding.pry
+      if attributes.keys == col
+        puts "yay"
+      end
+    end
     sql = "SELECT * FROM #{self.table_name} WHERE"
   end
 end
