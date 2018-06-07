@@ -39,5 +39,5 @@ class InteractiveRecord
     end
     
     values.join(", ")
-  ends
+  end
 end
